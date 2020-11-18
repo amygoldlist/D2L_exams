@@ -1,0 +1,127 @@
+
+```{r data generation, echo = FALSE, results = "hide"}
+### I pulled some financial functions from a collection I have.
+### These are built to mimic the financial calculator that my students buy
+### Maybe I'll do something someday, but here it is for now.
+
+
+library(dplyr)
+library(scales)
+
+### interesting:functions
+### convert interest rates:
+ICONV <- function(j1,m1=1,m2=1){
+  i1 <- 0.01*j1/m1
+  print(i1)
+  j2 <- m2*(1+i1)^(m1/m2)-m2
+  print(j2)
+  return(j2*100)
+}
+
+
+FV <- function(PY, CY=PY, N, IY, PV=0, PMT = 0, BGN = FALSE){
+  ## find the FV of a 5-fingered Annuity
+  ### Note:  this only works for positive right now, I need to get the signs correct
+  
+  
+  ##convert the interest rate
+  if (PY!=CY){
+    IY <- ICONV(j1=IY, m1 = CY, m2 = PY)
+  }
+  
+  ### get periodic rate
+  i <- 0.01*IY/PY
+  #print(i)
+  
+  ##if PMT ==0
+  FV <- PV*(1+i)^N
+  
+  if (!BGN){
+    FV <- PV*(1+i)^N + PMT* ((1+i)^N-1)/i
+  } else {
+    FV <- PV*(1+i)^N + PMT*(1+i) ((1+i)^N-1)/i
+  }
+  
+  ###ordinary annuity
+  ##  PV*(1+i)^N + PMT* ((1+i)^N-1)/i
+  
+  ##return(dollar(FV, accuracy = 0.01))
+  return(FV)
+}
+
+
+### generate all my cool things
+price <- sample(15:25,1)*1000
+disp_price <- dollar(price)
+  
+PV <- price - 3000  
+
+PMT <- round(runif(1,3,8),0)*100+49
+
+IY <- round(runif(1,min=1,max =6),2)
+
+### this is the true answer:
+FV_real <- FV(PY=12, N=36, IY = IY, PV = PV, PMT = -PMT) %>% abs()
+
+## I generated some fun fake answers
+FV_sign <- FV(PY=12, N=36, IY = IY, PV = PV, PMT = PMT)%>% abs()
+FV_price <- FV(PY=12, N=36, IY = IY, PV = price, PMT = -PMT)%>% abs()
+FV_price_sign <- FV(PY=12, N=36, IY = IY, PV = price, PMT = PMT)%>% abs()
+
+
+## single-choice list
+## Important:  you need to use this function to create the list of possibilities
+sc <- num_to_schoice(FV_real, wrong = c(FV_sign, FV_price, FV_price_sign), delta = 2, digits =2)
+
+
+
+
+
+```
+
+
+Question
+==============
+You decide to lease a new  automobile.  The vehicle costs `r dollar(price)` new and you are required to pay all taxes and a \$3,000 downpayment at the beginning of the lease.  The lease payments are `r dollar(PMT)` per month for three years and you know the lease company charges interest at `r IY`\% compounded monthly.
+
+What is the residual value of the car after three years?
+
+
+
+
+```{r questionlist, echo = FALSE, results = "asis"}
+
+## here are my possible answers
+
+answerlist(paste0("$",sc$questions), markup = "markdown")
+
+
+```
+
+
+
+
+Solution
+========
+
+| P/Y C/Y | N | I/Y | PV | PMT | FV | BGN|
+|:---:|:------:|:------:|:-------:|:---------:|:---------------:|:-----:|
+|$12$|$36$ | $`r as.character(IY)`$ | $`r as.character(PV)`$ | -$`r as.character(PMT)`$ | CPT | OFF|
+
+
+
+
+```{r solutionlist, echo = FALSE, results = "asis"}
+#answerlist(ifelse(sc$solutions, "True", "False"), markup = "markdown")
+dollar(FV_real, accuracy = 0.01)
+
+
+
+```
+
+Meta-information
+================
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exname: MC_residual_value
+exshuffle: 4

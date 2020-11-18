@@ -1,0 +1,69 @@
+```{r data generation, echo = FALSE, results = "hide"}
+#### This is a string variable, or short answer question.  
+#### It is a pretty basic Confidence Interval.
+#### Future Amy:  Can you put a $ before the data entry?  Can you make multiple correct answers?
+
+
+### Anyway, this first code chunk is all the code for my Confidence Interval.  
+
+library("scales")
+library("dplyr")
+
+### I'm sick of randoming!
+set.seed(1234)
+
+## pick an n between 12 and 28
+n <- sample(12:28,1)
+
+## pick a true mean and standard deviation
+mu <-runif(1, min = 8000, max = 20000)
+sigma <- runif(1, min = 1000, max = 4000)
+
+# generate data.  Honestly, this isn't 100% necessary, but it's nice, you know?
+expenses <-rnorm(n, mu, sigma) 
+
+## find summary statistics
+xbar<-  round(mean(expenses),0)
+xbardisplay <- as.character(xbar) ## this isn't necessary
+s <- round(sd(expenses),0) 
+
+## Picka  Confidence level, and find t  (3 decimal palces, so they can use a table)
+CI <- sample(c(90,95,98,99), size = 1)
+t <-qt(p =(100-CI)/200, df = n-1, lower.tail = FALSE) %>% 
+  round(3)
+
+## Find our Margin of Error, and the Lower and Upper bounds for the CI
+ME <- t*s/sqrt(n) 
+LB <- round(xbar-ME,2)
+UB <- round(xbar+ME,2)
+
+## This is a distractor number, it doesn't doesn't mean anything
+cost <- 100*sample(1:5,1) 
+  
+
+```
+
+
+Question
+========
+
+
+A publication specializing in dental information surveyed `r n` dentists at a cost of  `r dollar(cost)` per dentist concerning their monthly office expenses and found that the mean expenditure was `r dollar(xbar)` with a standard deviation of  `r dollar(s)`.  The distribution was approximately normal.  
+
+Give the `r CI`\% confidence interval for the true mean expenditure.  Round your answers to 2 decimal places.  Put the lower bound in the first box, and the upper bound in the second, and do not use dollar signs.
+
+```{r, echo = FALSE}
+
+## Note:  This is markdown, so I put my comments in an r chunk with echo = false.  Carry on!
+```
+
+Solution
+========
+The true mean is between  `r dollar(LB, accuracy = 0.01)` and `r dollar(UB, accuracy = 0.01)`
+
+
+Meta-information
+============
+extype: string 
+exsolution: `r as.character(LB)` |`r as.character(UB)`
+exname: conf_dentist

@@ -1,0 +1,51 @@
+
+
+```{r data generation, echo = FALSE, results = "hide"}
+
+### This is a basic Counting question
+
+## pick a fun name
+## This makes the test harder to google when students cheat.
+school_names <- c("Margaret Lawrence", "Alice Munro", "Viola Desmond", "Laura Secord")
+school <- sample(school_names, 1)
+
+### generate a whack of numbers for the problem
+k_1 <- sample(2:3,1)
+k_2 <- sample(20:25,1)
+
+j_1 <- sample(4:10,1)
+j_tot <- j_1*sample(20:25,1)
+
+i_1 <- sample(4:7,1)
+i_2 <- sample(22:27,1)
+
+s_1 <- sample(15:25,1)
+
+tot <- k_1*k_2+j_tot+ i_1*i_2+s_1
+
+## and find the answer
+mean_kids <- round(tot/(k_1+j_1+i_1+1),2)
+
+
+```
+
+
+Question
+========
+At `r school` School, there are `r k_1` kindergarten classes with `r k_2` students in each.  There are `r j_1` junior classes, containing a total of `r j_tot` students.  There are `r i_1` intermediate classes containing an average of `r i_1` students per class.  There is one senior class containing `r s_1` students.  What is the mean class size at `r school` School?  *Round to two decimal places*
+
+Solution
+========
+The mean number of students per class is `r mean_kids` students.
+
+
+
+
+Meta-information
+============
+extype: num
+exsolution: `r mean_kids`
+exname: Counting
+extol: 0.01
+
+
