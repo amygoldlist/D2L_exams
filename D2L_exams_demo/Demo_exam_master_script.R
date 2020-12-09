@@ -19,7 +19,7 @@ library("exams")
 library("tth")
 library("base64enc")
 library("dplyr")
-library("scales") ### this does $$ properly, which is important for finacial problems
+library("scales") ### this does $$ properly, which is important for financial problems
 
 
 ### check the questions individually.
@@ -44,12 +44,12 @@ exams2html(myexam)
 ### Now make a D2L package.  
 ## I can't make the Zip work, so I'm goign to figure that out.... later.
 
-## Also to figure out:  putting this in a proper directory.
+## Also to do:  putting this in a proper directory.
 
 
 
 set.seed(1234)
 exams2blackboard(myexam, 
                  name = paste0("r_exams_", Sys.Date()),
-                 n = 5,  ### how many copies of each?
+                 n = 100,  ### how many copies of each?
                  zip = FALSE)
