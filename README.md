@@ -1,5 +1,5 @@
 # D2L_exams
-Some demos of creating dynamic exams for D2L Brightspace, using R/examsas well as Excel.
+Some demos of creating dynamic exams for D2L Brightspace, using R/exams as well as Excel.
 
 D2L Brightspace (we call it the Learning Hub) makes giving online tests run very smoothly.  However, their numeric question types are limited to basic arithmatic, and only have single answer (not multi-part) questions.  
 
