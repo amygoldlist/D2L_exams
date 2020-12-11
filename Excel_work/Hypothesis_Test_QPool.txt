@@ -1,0 +1,17 @@
+D2L Brightspace Importing Instructions
+
+- Login as an instructor and select a course
+- Select the "Course Admin" link
+- Click "Import/Export/Copy Components"
+- Choose "Import Components" and "from a File"; select Start
+- In Select File, add the zip package associated with this text file
+- Select Advanced Options...
+- Click Continue after the pre-processing step
+- At the Select Component to Import, check Quizzes
+- At the Import Options, locate the "Import file to:" field
+- Enter the EXACT file name shown below (it's case-sensitive):
+
+  Hypothesis_Test_QPool
+
+- Choose "Continue" three times
+- The imported question library section will be available from the Question Library area of the course
