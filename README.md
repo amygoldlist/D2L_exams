@@ -27,3 +27,5 @@ Also more to come....
 * A great support thread on [R-forge](https://r-forge.r-project.org/forum/forum.php?thread_id=33404&forum_id=4377&group_id=1337)
 * BCIT has some good [resources](https://ltc.bcit.ca/help/sample-word-file-to-import-quiz-questions/)
 * Algonquin College has a great [online quiz generator](https://plato.algonquincollege.com/BrightspaceQuizGenerator/) which gave us the correct CSV formats for the Excel tool.
+* [Arithmetic Questions](https://documentation.brightspace.com/EN/le/question_library/instructor/create_arithmetic.htm) on D2L Brightspace
+* [Respondus](https://ltc.bcit.ca/help/for-instructors-respondus-information/) is a great tool for converting between LMS systems.  This link is to BCIT's help page, but your institute probably has a site license you can use.
