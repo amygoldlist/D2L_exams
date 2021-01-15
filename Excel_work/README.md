@@ -138,19 +138,19 @@ Mail merges have been around for ever, but they still work amazingly well.  To s
 *	Navigate to the tab “MAILINGS → Select Recipients → Use an Existing List”.  
 *	(If you are new, the Mail Merge Wizard under “Start Mail Merge” will walk you through the basics.)
 
-![Screen Grab of Mail Merge](images/hypoth_img_1.png)
+![Screen Grab of Mail Merge](images/hypoth_img_1.png#center)
 
 *	Find the Excel sheet we used before, and make sure you get navigate to the correct worksheet where your table is.  I try to always use the word MERGE in a table destined for a merge.  Excel tries to steer you into the Data sources file.
 
-![Screen Grab of Mail Merge](images/hypoth_img_2.png)
+![Screen Grab of Mail Merge](images/hypoth_img_2.png#center#)
 
 Now we’re at the fun part!  Just highlight the word you’d like to change, and use “INSERT MERGE FIELD” from the mailings menu to put in:
 
-![Screen Grab of Mail Merge](images/hypoth_img_3.png)
+![Screen Grab of Mail Merge](images/hypoth_img_3.png#center)
 
 When you are done, it should look like this:
 
-![Screen Grab of Completed Mail Merge](images/hypoth_img_4.png)
+![Screen Grab of Completed Mail Merge](images/hypoth_img_4.png#center)
 
 To see what your versions will look at, clock “Preview Results” in the top menu.  Fix any mistakes!
 
@@ -169,7 +169,7 @@ Here is a quick demo of Respondus, with handy pictures:
 
 •	Select “Import Questions”
 
-![Screen Grab of Respondus](images/hypoth_img_5.png)
+![Screen Grab of Respondus](images/hypoth_img_5.png#center)
 
 Make sure you select “Microsoft Word 2007 (DOCX)”, and find your merged file.  If you’ve used images (difficulty: advanced!) you’d put those in individually.
 *Note: If you are using images, consider using text, instead of doc, and creating html links to images.  Have an example?  Please share!*
@@ -178,15 +178,15 @@ If this is your first question, create a new exam.
 
 I like to make my naming super fancy, so my new questions all have a common name. Hit preview to make sure there are no errors:
 
-![Screen Grab of Respondus](images/hypoth_img_6.png)
+![Screen Grab of Respondus](images/hypoth_img_6.png#center)
 
 Now you can add more question, or go straight to “Preview and Publish”.  I usually set my settings on D2L, but you can do some of that here.  Preview your test, though it won’t look exactly like this on D2L:
 
-![Screen Grab of Respondus](images/hypoth_img_8.png)
+![Screen Grab of Respondus](images/hypoth_img_8.png#center)
 
 You can make changes here if you’d like, but now I will hit “Publish”.  I prefer not to mess with automatic upload to Brightspace, so I usually just “Export QTI XML for manual upload to brightspace”.  I am going to save this as a question library, and I give it a name under “Save As”
 
-![Screen Grab of Respondus](images/hypoth_img_9.png)
+![Screen Grab of Respondus](images/hypoth_img_9.png#center)
 
 Now I should have a zipped folder called “Hypothesis_Test_QPool.zip”, and a matching text file with import instructions.  We’re almost there!
 
@@ -195,19 +195,19 @@ Now I should have a zipped folder called “Hypothesis_Test_QPool.zip”, and a 
 Go to your course site, and under “edit course” select “Copy / Export / Import”.  Select “Import Course Material → from a file”, hit “Next”, and drag your zipped file into the box.  I suggest not using the “Advanced Menu” unless you have strong feelings about file structure.
 
 
-![Screen Grab of Brightspace](images/hypoth_img_10.png)
+![Screen Grab of Brightspace](images/hypoth_img_10.png#center)
 
 You’re done!  Create a new Test, add in a question pool, and select one of the 25 questions!
 
-![Screen Grab of Respondus](images/hypoth_img_11.png)
+![Screen Grab of Respondus](images/hypoth_img_11.png#center)
 
 Let’s look at one of those questions:
 
-![Screen Grab of Respondus](images/hypoth_img_12.png)
+![Screen Grab of Respondus](images/hypoth_img_12.png#center)
 
 ### Bonus:
 Oops!  I forgot one name in my mail merge!  Who is Olivia?
 
-![Screen Grab of Respondus](images/hypoth_img_13.png)
+![Screen Grab of Respondus](images/hypoth_img_13.png#center)
 
 This is where having good automation helps:  I can go back to my Word doc, make the fix, and rerun in Respondus.  I will delete or overwrite the questions I already made, and I don’t have to fix 25 copies.
