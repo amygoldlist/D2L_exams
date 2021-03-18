@@ -1,0 +1,66 @@
+
+
+
+```{r data generation, echo = FALSE, results = "hide"}
+### Q6 mode
+
+
+library(dplyr)
+
+### generate a data set with 10 items, 3 of 1, 2 of 2 others
+
+
+d1 <- sample(45:95,6, replace = FALSE)
+d2 <- sample(d1, 3, replace = FALSE)
+dat <- c(d1,d2,d2[1]) %>% sample(10, replace = FALSE)
+
+
+
+## single-choice list
+## Important:  you need to use this function to create the list of possibilities
+## delta = minimal distance between solutions
+#sc <- num_to_schoice(mode_ans, wrong = c(mean_ans,med_ans,sum_ans), delta = 0.1, digits =2)
+
+
+
+
+
+```
+
+
+Question
+==============
+A teacher wishes to use the mode to measure the performance of his Business Statistics class. Below are the final exam grades for 10 students:
+
+`r dat`
+
+
+Based upon this information, what is the class mode? 
+
+
+Answerlist
+----------
+* `r d2[1]`
+* `r d2[2]`
+* `r d2[3]`
+* (`r sort(d2)`)
+* No Mode
+
+
+
+
+Solution
+========
+
+`r d2[1]`
+
+
+
+
+
+Meta-information
+================
+extype: schoice
+exsolution: 10000
+exname: j06_mode_mc
+exshuffle: 5

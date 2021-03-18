@@ -1,0 +1,60 @@
+
+```{r data generation, echo = FALSE, results = "hide"}
+library(dplyr)
+
+cities <- c("Paris", "Marseilles", "Dijon", "Avignon", "Nice", "Lyon", "Toulouse", "Nantes", "Montpellier", "Bordeaux", "Strasbourg", "Lille", "Aix-en-Provence", "Metz", "Limoges", "Calais", "Pau")
+city <- sample(cities, 2)
+
+P_both <- sample(10:20,1)
+P1_not_2 <- sample(30:50,1)
+P2_not_1 <- sample(10:25,1)
+
+P1 <- P_both+P1_not_2
+P2 <- P_both+P2_not_1
+
+ANS = P1+P2_not_1
+
+## single-choice list
+## Important:  you need to use this function to create the list of possibilities
+## delta = minimal distance between solutions
+sc <- num_to_schoice(ANS, wrong = c(100-ANS,P1-P2,P1+P2,
+                                    P1+P_both,
+                                    P2+P_both), delta = 0.1, digits =0)
+
+
+
+
+
+```
+
+
+Question
+==============
+Rendezvous en France has found that `r P1`% of vacationers visit `r city[1]`, `r P2`% visit `r city[2]` and `r P_both`% visit both `r city[1]` and `r city[2]`.   What percentage of vacationers to France visits at least one of the cities? 
+
+
+
+
+```{r questionlist, echo = FALSE, results = "asis"}
+
+## here are my possible answers
+
+#answerlist(paste0("$",sc$questions), markup = "markdown") ### as money
+
+answerlist(paste0(sc$questions,"%"), markup = "markdown")
+```
+
+
+
+Solution
+========
+
+`r ANS`%
+
+
+Meta-information
+================
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exname: J09_france_mc
+exshuffle: 5

@@ -12,7 +12,6 @@
 
 
 
-
 ### Load up our important packages
 
 library("exams") 
@@ -26,8 +25,7 @@ library("scales") ### this does $$ properly, which is important for financial pr
 ### This is usueful for trouble shooting, but we are only viewing in html, not on D2L, so it's not perfect.
 
 exams2html("exercises/counting_numeric.Rmd")
-#exams2html("exercises/conf_dentist_short_answer.Rmd")
-# exams2html("exercises/MC_car_FV.Rmd")
+
 
 
 ### Things i learned:  sometimes numbers display odd.  solution:
@@ -35,7 +33,11 @@ exams2html("exercises/counting_numeric.Rmd")
 ### It's best to display using a display foprmat (like dollar() from scales)
 
 ### list all of the questions in the correct order.  I have three in this demo
-myexam <- paste0("exercises/",list("counting_numeric.Rmd", "conf_dentist_short_answer.Rmd", "FV_car_MC.Rmd"))
+myexam <- paste0("exercises/",list("counting_numeric.Rmd", 
+                                   "conf_dentist_short_answer.Rmd", 
+                                   "FV_car_MC.Rmd",
+                                   "J09_france_mc.Rmd",
+                                   "J06_mode_mc.Rmd"))
 
 
 ## make an html, ie, as a check on the whole thing:
@@ -51,5 +53,5 @@ exams2html(myexam)
 set.seed(1234)
 exams2blackboard(myexam, 
                  name = paste0("r_exams_", Sys.Date()),
-                 n = 100,  ### how many copies of each?
+                 n = 20,  ### how many copies of each?
                  zip = FALSE)
