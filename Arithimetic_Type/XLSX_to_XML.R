@@ -107,15 +107,15 @@ for (i in (1:nrow(df) )){
 ### Print to file
 
 ## create a new folder:
-folder_name <- paste0("output\\", file_name))
-dir.create(folder_name)
+
+dir.create(file_name)
 
 ## Write file number one
-write_xml(xml_qq, paste0(folder_name,"\\questiondb.xml"))
+write_xml(xml_qq, paste0(file_name,"\\questiondb.xml"))
 
 ## copy and write file number 2
 manifest <- read_xml("data\\imsmanifest.xml")
-write_xml(manifest, paste0(folder_name,"\\imsmanifest.xml"))
+write_xml(manifest, paste0(file_name,"\\imsmanifest.xml"))
 
 
 

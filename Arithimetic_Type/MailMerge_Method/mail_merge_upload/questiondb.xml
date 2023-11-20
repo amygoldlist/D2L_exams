@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <questestinterop>
 	<objectbank ident="QLIB_1" xmlns:d2l_2p0="http://desire2learn.com/xsd/d2lcp_v2p0">
-		<section d2l_2p0:id="1" ident="SECT_1" title="Section-arithmatic">
+		<section d2l_2p0:id="1" ident="SECT_1" title="Section-arithmetic">
 			<presentation_material>
 				<flow_mat>
 					<flow_mat>
 						<material>
-							<mattext texttype="text/plain">Created by R</mattext>
+							<mattext texttype="text/plain">Created by Me</mattext>
 						</material>
 					</flow_mat>
 				</flow_mat>
