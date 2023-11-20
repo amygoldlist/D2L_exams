@@ -19,12 +19,14 @@ xml_qq <- read_xml("data/questiondb_base.xml")
 ## add the date to the filename,  
 #####################################
 
+## Create filename, for everything:
+file_name <- paste0("arithmetic_section_", Sys.Date())
 
 ## 1. find the correct node:
 title_node <- xml_find_all(xml_qq, xpath = ".//section")
 
 ## 2. Write it to the correct attribute.  Attributes!!
-xml_attr(title_node,attr = "title") <- paste0("arithmetic_section_", Sys.Date())
+xml_attr(title_node,attr = "title") <- filename
 
 print("Wrote the title.  Starting the next phase....")
 
@@ -105,7 +107,7 @@ for (i in (1:nrow(df) )){
 ### Print to file
 
 ## create a new folder:
-folder_name <- paste0("output\\arithmetic_section_", Sys.Date())
+folder_name <- paste0("output\\", file_name))
 dir.create(folder_name)
 
 ## Write file number one
