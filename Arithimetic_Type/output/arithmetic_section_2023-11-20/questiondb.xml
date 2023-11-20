@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop>
+  <objectbank xmlns:d2l_2p0="http://desire2learn.com/xsd/d2lcp_v2p0" ident="QLIB_1">
+    <section d2l_2p0:id="1" ident="SECT_1" title="arithmetic_section_2023-11-20">
+      <presentation_material>
+        <flow_mat>
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Created by R</mattext>
+            </material>
+          </flow_mat>
+        </flow_mat>
+      </presentation_material>
+      <sectionproc_extension>
+        <d2l_2p0:display_section_name>no</d2l_2p0:display_section_name>
+        <d2l_2p0:display_section_line>no</d2l_2p0:display_section_line>
+        <d2l_2p0:type_display_section>0</d2l_2p0:type_display_section>
+      </sectionproc_extension>
+      <item d2l_2p0:id="4" ident="OBJ_1001" label="QUES_1001" d2l_2p0:page="1" title="adding 2" id="1001">
+        <itemmetadata>
+          <qtimetadata>
+            <qti_metadatafield>
+              <fieldlabel>qmd_computerscored</fieldlabel>
+              <fieldentry>yes</fieldentry>
+            </qti_metadatafield>
+            <qti_metadatafield>
+              <fieldlabel>qmd_questiontype</fieldlabel>
+              <fieldentry>Arithmetic</fieldentry>
+            </qti_metadatafield>
+            <qti_metadatafield>
+              <fieldlabel>qmd_weighting</fieldlabel>
+              <fieldentry>1.0000</fieldentry>
+            </qti_metadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <itemproc_extension>
+          <d2l_2p0:difficulty>1</d2l_2p0:difficulty>
+          <d2l_2p0:isbonus>no</d2l_2p0:isbonus>
+          <d2l_2p0:ismandatory>no</d2l_2p0:ismandatory>
+        </itemproc_extension>
+        <presentation>
+          <flow>
+            <material>
+              <mattext texttype="text/html"><![CDATA[What is 1+1?]]></mattext>
+              <mat_extension>
+                <variable name="a">
+                  <minvalue>0</minvalue>
+                  <maxvalue>10</maxvalue>
+                  <decimalplaces>0</decimalplaces>
+                  <step>1</step>
+                </variable>
+                <formula>2</formula>
+              </mat_extension>
+            </material>
+            <response_num ident="QUES_1001_NUM" rcardinality="Single" rtiming="no">
+              <render_fib fibtype="Decimal" prompt="Box">
+                <response_label ident="QUES_1001_A1"/>
+              </render_fib>
+            </response_num>
+            <response_str ident="QUES_1001_STR" rcardinality="Single" rtiming="no">
+              <render_fib fibtype="String" prompt="Box">
+                <response_label ident="QUES_1005_A2"/>
+              </render_fib>
+            </response_str>
+          </flow>
+        </presentation>
+        <hint>
+          <hintmaterial>
+            <flow_mat>
+              <material>
+                <mattext texttype="text/plain">This is a hint.  2</mattext>
+              </material>
+            </flow_mat>
+          </hintmaterial>
+        </hint>
+        <resprocessing>
+          <respcondition title="Single Condition">
+            <respcond_extension>
+              <formula>2</formula>
+              <precision type="decimalplaces" d2l_2p0:precision_enforced="no">2</precision>
+              <tolerance type="units">0.01</tolerance>
+              <units d2l_2p0:worth="0" casesensitive="no"/>
+            </respcond_extension>
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <setvar action="Set">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUES_1001">
+          <material>
+            <mattext texttype="text/plain">feedback is this was an easy question</mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item xmlns:d2l_2p0="http://desire2learn.com/xsd/d2lcp_v2p0" d2l_2p0:id="4" ident="OBJ_1002" label="QUES_1002" d2l_2p0:page="1" title="adding 3" id="1002">
+        <itemmetadata>
+          <qtimetadata>
+            <qti_metadatafield>
+              <fieldlabel>qmd_computerscored</fieldlabel>
+              <fieldentry>yes</fieldentry>
+            </qti_metadatafield>
+            <qti_metadatafield>
+              <fieldlabel>qmd_questiontype</fieldlabel>
+              <fieldentry>Arithmetic</fieldentry>
+            </qti_metadatafield>
+            <qti_metadatafield>
+              <fieldlabel>qmd_weighting</fieldlabel>
+              <fieldentry>1.0000</fieldentry>
+            </qti_metadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <itemproc_extension>
+          <d2l_2p0:difficulty>1</d2l_2p0:difficulty>
+          <d2l_2p0:isbonus>no</d2l_2p0:isbonus>
+          <d2l_2p0:ismandatory>no</d2l_2p0:ismandatory>
+        </itemproc_extension>
+        <presentation>
+          <flow>
+            <material>
+              <mattext texttype="text/html"><![CDATA[What is 2+1?]]></mattext>
+              <mat_extension>
+                <variable name="a">
+                  <minvalue>0</minvalue>
+                  <maxvalue>10</maxvalue>
+                  <decimalplaces>0</decimalplaces>
+                  <step>1</step>
+                </variable>
+                <formula>3</formula>
+              </mat_extension>
+            </material>
+            <response_num ident="QUES_1002_NUM" rcardinality="Single" rtiming="no">
+              <render_fib fibtype="Decimal" prompt="Box">
+                <response_label ident="QUES_1002_A1"/>
+              </render_fib>
+            </response_num>
+            <response_str ident="QUES_1002_STR" rcardinality="Single" rtiming="no">
+              <render_fib fibtype="String" prompt="Box">
+                <response_label ident="QUES_1005_A2"/>
+              </render_fib>
+            </response_str>
+          </flow>
+        </presentation>
+        <hint>
+          <hintmaterial>
+            <flow_mat>
+              <material>
+                <mattext texttype="text/plain">This is a hint, type 3</mattext>
+              </material>
+            </flow_mat>
+          </hintmaterial>
+        </hint>
+        <resprocessing>
+          <respcondition title="Single Condition">
+            <respcond_extension>
+              <formula>3</formula>
+              <precision type="decimalplaces" d2l_2p0:precision_enforced="no">1</precision>
+              <tolerance type="units">0.005</tolerance>
+              <units d2l_2p0:worth="0" casesensitive="no"/>
+            </respcond_extension>
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <setvar action="Set">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUES_1002">
+          <material>
+            <mattext texttype="text/plain">your feedback is 3</mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item xmlns:d2l_2p0="http://desire2learn.com/xsd/d2lcp_v2p0" d2l_2p0:id="4" ident="OBJ_1003" label="QUES_1003" d2l_2p0:page="1" title="adding 10" id="1003">
+        <itemmetadata>
+          <qtimetadata>
+            <qti_metadatafield>
+              <fieldlabel>qmd_computerscored</fieldlabel>
+              <fieldentry>yes</fieldentry>
+            </qti_metadatafield>
+            <qti_metadatafield>
+              <fieldlabel>qmd_questiontype</fieldlabel>
+              <fieldentry>Arithmetic</fieldentry>
+            </qti_metadatafield>
+            <qti_metadatafield>
+              <fieldlabel>qmd_weighting</fieldlabel>
+              <fieldentry>1.0000</fieldentry>
+            </qti_metadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <itemproc_extension>
+          <d2l_2p0:difficulty>1</d2l_2p0:difficulty>
+          <d2l_2p0:isbonus>no</d2l_2p0:isbonus>
+          <d2l_2p0:ismandatory>no</d2l_2p0:ismandatory>
+        </itemproc_extension>
+        <presentation>
+          <flow>
+            <material>
+              <mattext texttype="text/html"><![CDATA[What is 3+7?]]></mattext>
+              <mat_extension>
+                <variable name="a">
+                  <minvalue>0</minvalue>
+                  <maxvalue>10</maxvalue>
+                  <decimalplaces>0</decimalplaces>
+                  <step>1</step>
+                </variable>
+                <formula>10</formula>
+              </mat_extension>
+            </material>
+            <response_num ident="QUES_1003_NUM" rcardinality="Single" rtiming="no">
+              <render_fib fibtype="Decimal" prompt="Box">
+                <response_label ident="QUES_1003_A1"/>
+              </render_fib>
+            </response_num>
+            <response_str ident="QUES_1003_STR" rcardinality="Single" rtiming="no">
+              <render_fib fibtype="String" prompt="Box">
+                <response_label ident="QUES_1005_A2"/>
+              </render_fib>
+            </response_str>
+          </flow>
+        </presentation>
+        <hint>
+          <hintmaterial>
+            <flow_mat>
+              <material>
+                <mattext texttype="text/plain">This is a hint, it's 10</mattext>
+              </material>
+            </flow_mat>
+          </hintmaterial>
+        </hint>
+        <resprocessing>
+          <respcondition title="Single Condition">
+            <respcond_extension>
+              <formula>10</formula>
+              <precision type="decimalplaces" d2l_2p0:precision_enforced="no">0</precision>
+              <tolerance type="units">0.5</tolerance>
+              <units d2l_2p0:worth="0" casesensitive="no"/>
+            </respcond_extension>
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <setvar action="Set">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUES_1003">
+          <material>
+            <mattext texttype="text/plain">feedback, you should have known the answer was 10!</mattext>
+          </material>
+        </itemfeedback>
+      </item>
+    </section>
+  </objectbank>
+</questestinterop>
