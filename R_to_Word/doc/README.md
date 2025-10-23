@@ -1,0 +1,1 @@
+This folder contains complete exams, and thus it is in my .gitignore.
