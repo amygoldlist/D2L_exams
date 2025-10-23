@@ -1,0 +1,39 @@
+
+1. What is the primary goal of data governance?
+a) Protecting customer privacy  
+b) Improving data accuracy and availability  
+c) Ensuring data is used ethically  
+d) *All of the above  
+
+
+2. Which of the following is a key component of a data governance framework?
+a) Data silos  
+b) *Data quality management  
+c) Manual data entry  
+d) Data hoarding  
+
+
+3. Who is typically responsible for data governance in an organization?
+a) Data Analysts  
+b) *Chief Data Officer (CDO) or Data Governance Council  
+c) IT Support Team  
+d) Marketing Department  
+
+
+
+
+4. Which of these is NOT a common challenge in data governance?
+a) Defining clear data ownership  
+b) Managing large volumes of data  
+c) Aligning business and IT teams  
+d) *Increasing the number of data breaches  
+
+
+
+5. Data governance policies should be:
+a) Defined once and never reviewed  
+b)* Reviewed and updated regularly  
+c) Applied only to IT departments  
+d) Focused solely on external data  
+
+

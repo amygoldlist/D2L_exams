@@ -1,0 +1,168 @@
+---
+title: "Exam Generator (your title here)"
+date: "`r Sys.Date()`"
+output:
+  word_document:
+    reference_docx: ref/Exam_Template.docx
+params:
+  solutions_file: "slns.txt"
+  letter: ""
+
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(dplyr)
+library(scales)
+library(knitr)
+library(pander)
+
+## I like my names to vary.
+names <- read.csv('Ref/NAMES.csv')$NAME
+
+```
+
+
+
+**NAME:** __________________________________
+**STUDENT NUMBER:** _____________________
+
+$$~$$
+
+**DATE:** ______________ v. `r params$letter`
+
+- Make sure that your test has **12 pages**.
+- Show all work in the space provided. If you use a calculator, show entries.
+- Include all units, dollar signs, and percent signs in your final answer.
+- Round each answer to **2 decimal points**, unless otherwise indicated.
+- The test is **timed to take two hours**, but you will be given an **extra hour as bonus time**.
+- This is a **closed book exam** – you will not be allowed to bring in anything except for a drink, pens, pencils, erasers, and a BAII Plus Calculator (or similar non-programmable calculator). You should also bring your student ID to display on your desk.
+- If you have any electronics, including phones, smart watches, laptops, tablets, earbuds or smart glasses, they must remain in your backpack at the side or front of the room. If you have a medical necessity for electronics, please talk to the invigilator before the test begins.
+- **If you are caught with an unauthorized electronic, you will receive a 0 on this assessment, and an academic integrity report will be filed.**
+
+$$~$$
+
+
+
+
+```{r, echo=FALSE, results='asis'}
+## Note to Amy:  Borders!  Centring!  Oh well!
+
+## Also:  for posterity, make changes if needed.
+
+kable(
+  data.frame(
+    Question = c("Multiple Choice", "Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8", "TOTAL"),
+    Marks = c(36, 4, 4, 10, 11, 13, 7, 7, 8, 100),
+    Obtained = c("", "", "", "", "", "", "", "", "", "")
+  ),
+  align = c('l', 'c', 'c'),
+  #caption = "Midterm Mark Breakdown"
+)
+```
+
+
+# Multiple choice (2 MARKS EACH) 18 questions, 36 marks
+Select the best answer to each problem.
+\n
+
+```{r MC, echo = FALSE, results = "asis"}
+## this will read in the MC questions, and print them nicely.  
+
+## I never quite made the page breaks work, but oh well.
+
+source("MC_scramble.R")
+
+#breaks <- c(5,9,12)
+
+for (i in seq_along(MC_new)) {
+  ## if adds a page break BEFORE the questions
+  #if (i %in% breaks) {
+   # cat("\\newpage\n")
+#  }
+
+  cat(paste0(i, ". ", MC_new[[i]]$question, "\n"))
+  cat("\n")
+  for (j in seq_along(MC_new[[i]]$options)) {
+    cat(paste0("  ", letters[j], ") ", MC_new[[i]]$options[j], "\n"))
+    cat("\n")
+  }
+  cat("$$~$$")
+}
+
+
+
+
+
+
+```
+
+```{r slns, echo = FALSE, results = "hide"}
+##This chunk will write the MC solutions to your text file.
+## Not by letter, but by value - I'll improve one day?  Maybe?
+
+# Initialize an empty character vector
+slns <- character()
+
+# Build the vector line by line
+for (i in seq_along(MC_new)) {
+  slns[i] <- paste0(i, ":  ", MC_new[[i]]$answer, "\n")
+}
+
+# Write to a text file
+
+#print(params$solutions_file)
+cat("MC Solutions: \n", file = params$solutions_file, append = TRUE)
+cat(slns, file = params$solutions_file, append = TRUE)
+cat("\n", file =params$solutions_file, append = TRUE)
+
+
+
+```
+
+\newpage
+
+# Long Answer Questions: Show all work
+## Sample Question 1 [4 marks] 
+
+```{r Q1, echo = FALSE, results = "hide"}
+
+### probably, you can do this in other documents, and feed it in here.  
+### This is here for getting an idea, don't use this on a test!
+
+name <- sample(names,2, replace = FALSE)
+
+c <- sample(c(2,4,12),1)
+
+t <- sample(3:6,1)
+
+SLN1 <- c+t
+
+cat(paste0("Q1: ", SLN1,"\n\n"), file =params$solutions_file, append = TRUE)
+
+
+
+```
+
+`r name[1]` has `r t` marbles, and `rname[2]` has `r c`marbles.  How many marbles do they have in total?
+
+
+$$~$$
+$$~$$
+$$~$$
+$$~$$
+$$~$$
+$$~$$
+$$~$$
+$$~$$
+$$~$$
+$$~$$
+
+
+\newpage
+## Question 2 [4 marks]
+
+
+Here is my second question
